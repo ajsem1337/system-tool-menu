@@ -1,34 +1,48 @@
-# system-tool-menu
-Simple System Management Menu
+## Overview
+This PowerShell script provides a simple terminal-based menu for managing your Windows system. It allows you to perform common system maintenance tasks
 
-This PowerShell script provides a simple terminal-based menu for managing your Windows system. It allows you to perform common system maintenance tasks such as:
-Features:
+## Features
 
-    System Updates:
-        Install and update Windows components.
-        Update package managers like Chocolatey, Winget, and Scoop.
-        Option to install missing package managers if not detected.
+1. **Windows Update**
 
-    System Diagnostics:
-        Check and repair system integrity using DISM and SFC.
-        Scan and repair disk drives using chkdsk.
+   - Install the latest Windows updates using the PSWindowsUpdate module.
+2. **Package Managers**
 
-    Logging:
-        Optional logging of all operations to a timestamped log file for future reference.
+   - **Chocolatey**: Update all Chocolatey-installed packages. Install Chocolatey if missing.
+   - **Winget**: Update all Winget-installed packages. Install Winget if missing.
+   - **Scoop**: Update all Scoop-installed packages. Install Scoop if missing.
+3. **System Diagnostics**
 
-    Time Tracking:
-        Displays the duration of each operation after completion.
+   - **DISM**: Repair system image.
+   - **SFC Scannow**: Check system file integrity.
+   - **CheckDisk**: Scan and repair disk errors.
+4. **Backup and Recovery**
 
-How to Use:
+   - Create a registry backup.
+   - Create a system restore point.
+   - Run Disk Cleanup.
+5. **Reinstall Microsoft Store**
 
-    Open PowerShell as Administrator.
-    Run the script using:
+   - Re-register Microsoft Store if it is missing or broken.
+6. **Additional Installations**
 
-    .\system-tool-menu.ps1
+   - **DirectX**: Install DirectX runtime.
+   - **.NET Runtime 6**: Install .NET Runtime version 6.
+   - **.NET Runtime 8**: Install .NET Runtime version 8.
+   - **.NET Runtime 9**: Install .NET Runtime version 9.
 
-    Follow the interactive menu to choose your desired operation.
+## Requirements
 
-Requirements:
+- Windows 10/11
+- PowerShell 5.1 or newer (PowerShell 7 recommended)
+- Administrator privileges
 
-    Windows PowerShell (Administrator access required)
-    Internet connection for downloading updates or missing components.
+## Installation and Usage
+
+1. Download the script from latest release:
+2. Run the script:
+
+   ```powershell
+   .\system-tool-menu.ps1
+   ```
+3. Ensure PowerShell is running as administrator.
